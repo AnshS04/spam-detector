@@ -1,0 +1,62 @@
+
+### Setup Instructions
+
+1. **Install Required Packages:**
+   - First, ensure you install the necessary dependencies listed in the `requirements.txt` file. Run the following command:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+2. **Create Database Migrations:**
+   - Next, generate and apply database migrations with the following commands:
+     ```bash
+     python manage.py makemigrations
+     python manage.py migrate
+     ```
+
+3. **Environment Variables:**
+   - Ensure there is a `.env` file in the root directory containing the `JWT_SECRET` key for your JWT-based authentication. For example:
+     ```
+     JWT_SECRET=your_secret_key
+     ```
+
+4. **Start the Server:**
+   - After setting up the environment and database, you can run the server with:
+     ```bash
+     python manage.py runserver
+     ```
+
+---
+
+### API Endpoints
+
+- **User Registration:**
+  - Endpoint: `/api/register`
+  - Purpose: To create a new user account.
+
+- **User Login:**
+  - Endpoint: `/api/login`
+  - Purpose: To authenticate and log in a user.
+
+- **Report Spam:**
+  - Endpoint: `/api/report-spam/`
+  - Purpose: To report a phone number as spam.
+
+- **Add Contact:**
+  - Endpoint: `/api/addContact/`
+  - Purpose: To add a new contact to the system.
+
+- **Search by Name:**
+  - Endpoint: `/api/search/`
+  - Purpose: To search for a contact by name.
+
+- **Search by Phone Number:**
+  - Endpoint: `/api/searchNumber/`
+  - Purpose: To search for a contact by phone number.
+
+- **Get Contact Details:**
+  - Endpoint: `/api/getDetails/`
+  - Purpose: To retrieve the details of a specific contact.
+
+---
+
